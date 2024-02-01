@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{%block title%}
+{% if category %}{{ category.name }}{% else %}Товари{% endif %}
+{% endblock %}
+
+{% block content%}
+     <div id="sidebar" class="categories">
+        <h3>Категорії</h3>
+        <div class="category_item">
+            <a href="{% url 'shop:product_list' %}">Всі категорії</a>
+        </div>
+        {% for c in categories %}
+         <div  class="category_item {% if category.slug == c.slug %} selected {% endif %}">
+             <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+         </div>
+         {% endfor %}
+    </div>
+    <div id="main" class="products_wrap">
+        <h1>{% if category %}{{ category.name }}{% else %}Товари{% endif %}</h1>
+        <div class="product_list">
+            {% for product in products %}
+                <div class="product_item">
+                    <div>
+                        <div class="product_image">
+                            <a href="{{ product.get_absolute_url }}">
+                                <img src="{% if product.image %}{{ product.image.url }}{% endif %}">
+                            </a>
+                        </div>
+                        <div class="product_name">
+                            <b><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></b>
+                        </div>
+                    </div>
+                    <div class="product_buy">
+                        {{ product.price }} грн.
+                        <button class="btn_basket"> В корзину </button>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

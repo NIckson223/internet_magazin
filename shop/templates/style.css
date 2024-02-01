@@ -1,12 +1,15 @@
 :root{
-    --font-color: #fff ;
+    /* Basic styles */
+    --font-color: #000 ;
+    --wrap-width: 1386px;
+
 }
 
 body {
     font-family: 'Merriweather', sans-serif;
     color: var(--font-color);
     margin: 0;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 a{
@@ -15,14 +18,18 @@ a{
 }
 
 header,footer{
+    color: #fff;
     background: #b7b7b7;
+    box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header{
+    color: #fff;
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: var(--wrap-width);
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .navigation{
@@ -33,6 +40,7 @@ header,footer{
 }
 
 .nav_item{
+    color: #fff;
     padding: 22px 38px;
 }
 
@@ -50,4 +58,9 @@ footer{
     width: 100%;
     margin-top: auto;
     height: 40px;
+}
+
+.main_wrap{
+    margin: auto;
+    width: var(--wrap-width);
 }

@@ -1,12 +1,15 @@
 :root{
-    --font-color: #fff ;
+    /* Basic styles */
+    --font-color: #000 ;
+    --wrap-width: 1386px;
+
 }
 
 body {
     font-family: 'Merriweather', sans-serif;
     color: var(--font-color);
     margin: 0;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 a{
@@ -15,13 +18,16 @@ a{
 }
 
 header,footer{
+    color: #fff;
     background: #b7b7b7;
+    box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header{
+    color: #fff;
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: var(--wrap-width);
     margin: auto;
 }
 
@@ -33,6 +39,7 @@ header,footer{
 }
 
 .nav_item{
+    color: #fff;
     padding: 22px 38px;
 }
 
@@ -50,4 +57,88 @@ footer{
     width: 100%;
     margin-top: auto;
     height: 40px;
+}
+
+.main_wrap{
+    margin: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* сторінка із товарами */
+.categories{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 100%;
+    padding: 20px 10px 30px 10px;
+    position: fixed;
+    left: 0;
+    height:1000px ;
+}
+.categories>h3{
+    padding-left:10px;
+}
+
+
+#selected{
+    background: #faf;
+}
+
+.category_item{
+    padding: 10px 20px;
+    border-bottom: 1px solid #d7d7d7 ;
+}
+
+.category_item:hover{
+    background-color: #ccc;
+}
+
+
+/* Product card design*/
+
+.product_wrap{
+    margin-left: 40px;
+}
+
+.product_list{
+    display: flex;
+}
+
+.product_item{
+    padding: 12px 18px;
+    width: 220px;
+    height: 382px;
+    
+    box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-right: 32px;
+    margin-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_image{
+    width: 240px;
+    height: 240px;
+}
+
+.product_name{
+    padding-top: 12px;
+    font-size: 20px;
+}
+
+.product_buy{
+    margin-top: auto;
+}
+
+.btn_basket{
+    margin-left: 14px;
+    font-size: 18px;
+    padding: 8px 12px;
+    border: none;
+    background:greenyellow;
+    border-radius: 4px;
 }
