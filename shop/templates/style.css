@@ -1,0 +1,53 @@
+:root{
+    --font-color: #fff ;
+}
+
+body {
+    font-family: 'Merriweather', sans-serif;
+    color: var(--font-color);
+    margin: 0;
+    background-color: #ccc;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+header,footer{
+    background: #b7b7b7;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav_item{
+    padding: 22px 38px;
+}
+
+.nav_item:hover{
+    border-radius: 6px;
+    color: #fff;
+    background: #ccc;
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    height: 40px;
+}
