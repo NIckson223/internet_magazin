@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block title%} {%endblock%}</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="{% static 'js/amount.js'%}"></script>
 </head>
 <body>
     <header>
@@ -20,8 +23,8 @@
                 <a href="{% url 'shop:product_list' %}">
                     <div class="nav_item">Товари</div>
                 </a>
-                <a href="">
-                    <div class="nav_item">Корзина</div>
+                <a href="{% url 'cart:cart_detail'%}">
+                    <div class="nav_item">Кошик</div>
                 </a>
 
                 <a href="">

@@ -5,5 +5,48 @@
 {% endblock %}
 
 {% block content%}
+    <div class="prt_wrap">
+        <div class="prt_header">
+            <h1>{{ product.name }}</h1>
+        </div>
+        <div class="prt_up">
+            <div class="prt_img">
+                <img src="{% if product.image %}{{ product.image.url }}{% endif %}" alt="">
+            </div>
+            <div class="prt_buy">
+                <div class="prt_amount_control">
+                    <div class="prt_amount_btn" onclick="decrement()">
+                        <ion-icon name="remove-circle-outline"></ion-icon>
+                    </div>
+                    <div class="amount_input">
+                        <input type="number"  id="quantity" name="quantity" min="1" value="1">
+                    </div>
+                    <div class="prt_amount_btn" onclick="increment()" >
+                        <ion-icon name="add-circle-outline" ></ion-icon>
+                    </div>
+                    <div class="prt_control_label">
+                        шт.
+                    </div>
+                </div>
+                <div class="prt_buy_control">
+                    <div class="prt_price">
+                        {{ product.price }} грн.
+                    </div>
+                    <div class="prt_btn">
+                        <button>
+                            Купити
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prt_down">
+            <h2>Опис Товару</h2>
+            <div class="line"></div>
+            </hr>
+            <div class="prt_desc">{{ product.description }}</div>
+            
+        </div>
+    </div>
 
 {% endblock %}

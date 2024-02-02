@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16c4f259-bbe0-44ea-8b47-e5e90efc41c5" name="Changes" comment="Add cart functional">
-      <change afterPath="$PROJECT_DIR$/cart/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/templates/cart/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
+    <list default="true" id="16c4f259-bbe0-44ea-8b47-e5e90efc41c5" name="Changes" comment="Add cart template and make render of templates">
+      <change afterPath="$PROJECT_DIR$/shop/static/js/amount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internet_magazin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/internet_magazin/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/templates/cart/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart/templates/cart/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/shop/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/goods/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/shop/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/templates/shop/product/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706863533822</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add cart template and make render of templates">
+      <option name="closed" value="true" />
+      <created>1706865655891</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706865655892</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -201,6 +210,7 @@
     <MESSAGE value="Make templates and base html" />
     <MESSAGE value="Start working on Cart for shop" />
     <MESSAGE value="Add cart functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add cart functional" />
+    <MESSAGE value="Add cart template and make render of templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add cart template and make render of templates" />
   </component>
 </project>
