@@ -1,0 +1,76 @@
+:root{
+    /* Basic styles */
+    --font-color: #000 ;
+    --wrap-width: 1386px;
+
+}
+
+body {
+    font-family: 'Merriweather', sans-serif;
+    color: var(--font-color);
+    margin: 0;
+    background-color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+header,footer{
+    color: #fff;
+    background: #b7b7b7;
+    box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: var(--wrap-width);
+    margin: auto;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav_item{
+    color: #fff;
+    padding: 22px 38px;
+}
+
+.nav_item:hover{
+    border-radius: 6px;
+    color: #fff;
+    background: #ccc;
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    height: 40px;
+}
+
+.main_wrap{
+    margin: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* сторінка із товарами */
+
+
+
+/* Product card design*/
+
+

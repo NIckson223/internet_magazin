@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="img_logo">
+                ЛОГО
+            </div>
+            <nav class="navigation">
+                <a href="{%url 'shop:home'%}">
+                    <div class="nav_item">Головна</div>
+                </a>
+                <a href="{% url 'shop:product_list' %}">
+                    <div class="nav_item">Товари</div>
+                </a>
+                <a href="">
+                    <div class="nav_item">Корзина</div>
+                </a>
+
+                <a href="">
+                    <div class="nav_item">Про нас</div>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main_wrap">
+            {% block content %}
+            {% endblock%}
+        </div>
+    </section>
+
+    <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+</body>
+</html>
