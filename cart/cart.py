@@ -14,6 +14,7 @@ class Cart(object):
     def __iter__(self):
         product_ids = self.cart.keys()
         products = Product.objects.filter(id__in=product_ids)
+        product_map = {str(product.id): product for product in products}
 
         for product in products:
             self.cart[str(product.id)]['product'] = product
@@ -24,7 +25,7 @@ class Cart(object):
             yield item
 
     def __len__(self):
-        sum(item['quantity'] for item in self.cart.values())
+        return sum(item['quantity'] for item in self.cart.values())
 
     def add(self,product,quantity=1,update_quantity=False):
         product_id = str(product.id)
