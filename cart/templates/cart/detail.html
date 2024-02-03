@@ -1,9 +1,69 @@
-{% extends 'base.html'%}
-
-{%block title%}
-Корзина
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Кошик
 {% endblock %}
+{% block content %}
+    <div class="cart_wrap">
+        <div class="cart_header">
+            <a href="{% url 'shop:product_list' %}" >
+                <div class="button_continue">Продовжити покупки</div>
+            </a>
+            <a href="#" class="button_buy">
+                <div>Купити</div>
+            </a>
+        </div>
+        <div class="cart_main">
+            <h1>Ваші покупки</h1>
+            <table class="cart_table">
+                <thead>
+                <tr>
+                    <th>Фото</th>
+                    <th>Назва</th>
+                    <th>Кількість</th>
+                    <th></th>
+                    <th>Ціна за шт</th>
+                    <th>Сума</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in cart %}
+                    {% with product=item.product %}
+                        <tr class="cart_item">
+                            <td>
+                                <a href="{{ product.get_absolute_url }}">
+                                    <img src="
+                                        {% if product.image %}
+                                            {{ product.image.url }}
+                                        {% else %}
+                                            {% static 'img/no_image.png' %}
+                                        {% endif %}" width="140px" height="140px">
+                                </a>
+                            </td>
+                            <td>{{ product.name }}</td>
+                            <td class="item_quantity">{{ item.quantity }}</td>
+                            <td><a href="{% url 'cart:cart_remove' product.id%}"><div class="button_remove">Видалити</div></a></td>
+                            <td class="price">{{ item.price }} грн.</td>
+                            <td class="total_price"><b>{{ item.total_price }} грн.</b></td>
+                        </tr>
+                    {% endwith %}
+                {% endfor %}
+                <tr class="total">
+                    <td colspan="4"></td>
+                    <td class="total_price_label"><b>Всього</b></td>
+                    
+                    <td class="total_price"><b>{{ cart.get_total_price }} грн.</b></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-{% block content%}
+
+
+    
+
+
+
 
 {% endblock %}

@@ -67,7 +67,25 @@ footer{
 }
 
 
-/* сторінка із товарами */
+/* Кошик */
+.cart_wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_header{
+    display: flex;
+    flex-direction: row;
+}
+
+.button_continue{
+    padding: 10px 30px;
+    background: #d7d7d7;
+}
+
+.button_buy{
+
+}
 
 
 
