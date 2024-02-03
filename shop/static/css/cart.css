@@ -7,10 +7,17 @@
 
 }
 
-
+.cart_table_border, .cart_table_border>th, .cart_table_border>td{
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+}
 .cart_table{
     width: 100%;
+    border-collapse: collapse;
+    
 }
+
+
 .cart_wrap{
     display: flex;
     flex-direction: column;
@@ -22,6 +29,10 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+.cart_table_header{
+    border: 1px solid black;
+    padding-bottom: 18px;
 }
 
 .cart_item{
@@ -61,8 +72,12 @@
     text-align: center;
 }
 
-.total_price{
+.total_price, .total_cart{
     font-weight:bolder;
+}
+
+.total_cart{
+    font-size: 22px;
 }
 
 .total_price_label{

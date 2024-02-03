@@ -15,10 +15,10 @@
         </div>
         <div class="cart_main">
             <h1>Ваші покупки</h1>
-            <table class="cart_table">
-                <thead>
-                <tr>
-                    <th>Фото</th>
+            <table class="cart_table cart_table_border">
+                <thead class="cart_table_header cart_table_border">
+                <tr class="cart_table_header cart_table_border">
+                    <th >Фото</th>
                     <th>Назва</th>
                     <th>Кількість</th>
                     <th></th>
@@ -29,7 +29,7 @@
                 <tbody>
                 {% for item in cart %}
                     {% with product=item.product %}
-                        <tr class="cart_item">
+                        <tr class="cart_item cart_table_border">
                             <td>
                                 <a href="{{ product.get_absolute_url }}">
                                     <img src="
@@ -48,11 +48,11 @@
                         </tr>
                     {% endwith %}
                 {% endfor %}
-                <tr class="total">
+                <tr class="total_price_label">
                     <td colspan="4"></td>
                     <td class="total_price_label"><b>Всього</b></td>
                     
-                    <td class="total_price"><b>{{ cart.get_total_price }} грн.</b></td>
+                    <td class="total_cart"><b>{{ cart.get_total_price }} грн.</b></td>
                 </tr>
                 </tbody>
             </table>
