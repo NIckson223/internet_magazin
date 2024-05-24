@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>YouTube Statistics</title>
+</head>
+<body>
+
+    <img class = "img" src="{%static 'img/111.png'%}" alt="YouTube">
+    <h1>YouTube Statistic</h1>
+    <div>
+        <p class = "text">Ласкаво просимо на наш сайт - вашого надійного помічника у світі YouTube статистики! </p>
+    <p class = "text">Тут ти знайдеш всебічну аналітику для відео-контент-криейторів, це допоможе їм розбиратися в даних та приймати обґрунтовані рішення для подальшого розвитку.</p>
+    </div>
+    <div class="dropdown">
+        <span class = "text">Обери статистику</span>
+        <div class="dropdown-content">
+        <p class = "text"><a href="{% url 'subs' %}">Підписки VS переглядів відео </a></p>
+        <p class = "text"><a href="{% url 'most_popular'%}">25 найпопулярніших каналів за їх типом</a></p>
+        <p class = "text"><a href="{% url 'last_25'%}">Останні 25 каналів, переглянутих за типом каналу</a></p>
+        <p class = "text"><a href="{% url 'type'%}">Типи каналів, %</a></p>
+        <p class = "text"><a href="{% url 'most_popular_25'%}">25 найпопулярніших каналів</a></p>
+        <p class = "text"><a href="{% url 'popular'%}">Популярність YouTube-каналів в країнах</a></p>
+        </div>
+    </div>
+    {%block statistic%}
+
+    {%endblock%}
+    <p>Дані за 2023 рік </p>
+</body>
+</html>
