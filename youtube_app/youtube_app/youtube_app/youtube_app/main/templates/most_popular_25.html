@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+
+{%block statistic%}
+    <div class="statistic">
+        <h2>25 найпопулярніших каналів</h2>
+        <div class="wrp_stat">
+            <div class="stat_item">
+                <img src="data:image/png;base64,{{ img }}" width="670px" height="600px"></img>
+            </div>
+            <div class="stat_item">
+               <p class = "text">Діаграма показує 25 найпопулярніших каналів на YouTube за кількістю переглядів відео. На горизонтальній осі відображаються кількість переглядів, яка варіюється від 0 до понад 200 мільярдів. Кожна смуга різного кольору представляє різний канал, при цьому T-Series має найбільшу кількість переглядів.</p>
+            </div>
+        </div>
+    </div>
+{%endblock%}
